@@ -102,37 +102,37 @@ body{
 }
 
 .join-btn{
-    margin-top:28px;
-    width:88%;
-    max-width:340px;
+    margin-top:32px;
+    width:94%;
+    max-width:390px;
     margin-left:auto;
     margin-right:auto;
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:10px;
+    gap:14px;
     text-decoration:none;
     background:#2f6fc4;
     color:#fff;
-    padding:13px 8px;
-    border-radius:45px;
-    font-size:16px;
+    padding:18px 12px;
+    border-radius:50px;
+    font-size:20px;
     font-weight:900;
-    border:4px dashed #d8ff36;
-    box-shadow:0 8px 18px rgba(0,0,0,0.16);
+    border:5px dashed #d8ff36;
+    box-shadow:0 10px 22px rgba(0,0,0,0.18);
     animation:glow 1.4s infinite alternate;
 }
 
 .telegram-icon{
-    width:26px;
-    height:26px;
+    width:32px;
+    height:32px;
     background:#fff;
     color:#2f6fc4;
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:13px;
+    font-size:16px;
     font-weight:bold;
 }
 
@@ -168,7 +168,7 @@ body{
     }
 
     .join-btn{
-        font-size:15px;
+        font-size:18px;
     }
 
     .num{
@@ -201,22 +201,22 @@ body{
     <div class="timer">
 
         <div class="time-box">
-            <div class="num" id="days">00</div>
+            <div class="num">00</div>
             <div class="label">DAYS</div>
         </div>
 
         <div class="time-box">
-            <div class="num" id="hours">00</div>
+            <div class="num">00</div>
             <div class="label">HOURS</div>
         </div>
 
         <div class="time-box">
-            <div class="num" id="minutes">00</div>
+            <div class="num">00</div>
             <div class="label">MINUTES</div>
         </div>
 
         <div class="time-box">
-            <div class="num" id="seconds">00</div>
+            <div class="num" id="seconds">07</div>
             <div class="label">SECONDS</div>
         </div>
 
@@ -239,3 +239,7 @@ body{
 </div>
 
 <script>
+
+let seconds = 7;
+
+const secElement = document.
