@@ -1,23 +1,240 @@
-const countdownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ALPHA GAMING</title>
 
-setInterval(function(){
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-    const now = new Date().getTime();
-    const distance = countdownDate - now;
+<style>
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    document.getElementById("days").innerHTML = String(days).padStart(2,'0');
-    document.getElementById("hours").innerHTML = String(hours).padStart(2,'0');
-    document.getElementById("minutes").innerHTML = String(minutes).padStart(2,'0');
-    document.getElementById("seconds").innerHTML = String(seconds).padStart(2,'0');
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ececec;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    overflow-x:hidden;
+}
 
-},1000);
+.container{
+    width:100%;
+    max-width:480px;
+    text-align:center;
+    padding:40px 18px 70px;
+}
 
-</script>
+.logo-wrap{
+    margin-top:35px;
+    animation:float 3s ease-in-out infinite;
+}
 
-</body>
-</html>
+.logo{
+    width:170px;
+    height:170px;
+    margin:auto;
+    border-radius:50%;
+    background:#fff;
+    padding:7px;
+    border:3px solid #bfbfbf;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.title{
+    margin-top:25px;
+    font-size:34px;
+    line-height:1.15;
+    font-weight:900;
+    color:#111;
+}
+
+.title span{
+    color:#0f9d58;
+}
+
+.sub{
+    margin-top:10px;
+    font-size:15px;
+    color:#ff2d2d;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-top:24px;
+}
+
+.time-box{
+    text-align:center;
+}
+
+.num{
+    font-size:30px;
+    font-weight:900;
+    color:#d62828;
+}
+
+.label{
+    font-size:12px;
+    font-weight:700;
+    color:#d62828;
+    margin-top:3px;
+}
+
+.join-btn{
+    margin-top:28px;
+    width:72%;
+    max-width:260px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    background:#2f6fc4;
+    color:#fff;
+    padding:13px 8px;
+    border-radius:45px;
+    font-size:16px;
+    font-weight:900;
+    border:4px dashed #d8ff36;
+    box-shadow:0 8px 18px rgba(0,0,0,0.16);
+    animation:glow 1.4s infinite alternate;
+}
+
+.telegram-icon{
+    width:26px;
+    height:26px;
+    background:#fff;
+    color:#2f6fc4;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.powered{
+    margin-top:40px;
+    font-size:12px;
+    color:#666;
+    font-weight:600;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 10px rgba(47,111,196,0.5);
+    }
+    to{
+        box-shadow:0 0 24px rgba(47,111,196,0.9);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@media(max-width:480px){
+
+    .title{
+        font-size:28px;
+    }
+
+    .join-btn{
+        font-size:15px;
+    }
+
+    .num{
+        font-size:26px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo-wrap">
+        <div class="logo">
+            <img src="https://i.ibb.co/XZ4ffCKM/IMG-3813.jpg" alt="Alpha Gaming">
+        </div>
+    </div>
+
+    <h1 class="title">
+        ALPHA <span>GAMING</span><br>
+        BGMI HACK EXPERT 🔥
+    </h1>
+
+    <div class="sub">
+        🔥 100% SAFE & ANTI BAN 🔥
+    </div>
+
+    <div class="timer">
+
+        <div class="time-box">
+            <div class="num" id="days">00</div>
+            <div class="label">DAYS</div>
+        </div>
+
+        <div class="time-box">
+            <div class="num" id="hours">00</div>
+            <div class="label">HOURS</div>
+        </div>
+
+        <div class="time-box">
+            <div class="num" id="minutes">00</div>
+            <div class="label">MINUTES</div>
+        </div>
+
+        <div class="time-box">
+            <div class="num" id="seconds">00</div>
+            <div class="label">SECONDS</div>
+        </div>
+
+    </div>
+
+    <a href="https://t.me/+eD-Sloc5Onk1ZDc1" class="join-btn">
+
+        <div class="telegram-icon">✈</div>
+
+        JOIN TELEGRAM
+
+        <div class="telegram-icon">✈</div>
+
+    </a>
+
+    <div class="powered">
+        Alpha Gaming Official © 2026
+    </div>
+
+</div>
+
+<script>
