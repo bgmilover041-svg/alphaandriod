@@ -1,245 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ALPHA GAMING</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:#ececec;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    overflow-x:hidden;
-}
-
-.container{
-    width:100%;
-    max-width:480px;
-    text-align:center;
-    padding:40px 18px 70px;
-}
-
-.logo-wrap{
-    margin-top:35px;
-    animation:float 3s ease-in-out infinite;
-}
-
-.logo{
-    width:170px;
-    height:170px;
-    margin:auto;
-    border-radius:50%;
-    background:#fff;
-    padding:7px;
-    border:3px solid #bfbfbf;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-
-.logo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:50%;
-}
-
-.title{
-    margin-top:25px;
-    font-size:34px;
-    line-height:1.15;
-    font-weight:900;
-    color:#111;
-}
-
-.title span{
-    color:#0f9d58;
-}
-
-.sub{
-    margin-top:10px;
-    font-size:15px;
-    color:#ff2d2d;
-    font-weight:800;
-    letter-spacing:1px;
-}
-
-.timer{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    margin-top:24px;
-}
-
-.time-box{
-    text-align:center;
-}
-
-.num{
-    font-size:30px;
-    font-weight:900;
-    color:#d62828;
-}
-
-.label{
-    font-size:12px;
-    font-weight:700;
-    color:#d62828;
-    margin-top:3px;
-}
-
-.join-btn{
-    margin-top:32px;
-    width:94%;
-    max-width:390px;
-    margin-left:auto;
-    margin-right:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:14px;
-    text-decoration:none;
-    background:#2f6fc4;
-    color:#fff;
-    padding:18px 12px;
-    border-radius:50px;
-    font-size:20px;
-    font-weight:900;
-    border:5px dashed #d8ff36;
-    box-shadow:0 10px 22px rgba(0,0,0,0.18);
-    animation:glow 1.4s infinite alternate;
-}
-
-.telegram-icon{
-    width:32px;
-    height:32px;
-    background:#fff;
-    color:#2f6fc4;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:16px;
-    font-weight:bold;
-}
-
-.powered{
-    margin-top:40px;
-    font-size:12px;
-    color:#666;
-    font-weight:600;
-}
-
-@keyframes glow{
-    from{
-        box-shadow:0 0 10px rgba(47,111,196,0.5);
-    }
-    to{
-        box-shadow:0 0 24px rgba(47,111,196,0.9);
-    }
-}
-
-@keyframes float{
-    0%,100%{
-        transform:translateY(0px);
-    }
-    50%{
-        transform:translateY(-10px);
-    }
-}
-
-@media(max-width:480px){
-
-    .title{
-        font-size:28px;
-    }
-
-    .join-btn{
-        font-size:18px;
-    }
-
-    .num{
-        font-size:26px;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALPHA GAMING</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Sahi Font Link Fix Kiya Gaya Hai */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+        
+        body{ font-family:'Poppins',sans-serif; background:#050505; color:white; overflow-x:hidden; }
+        .bg-glow{ position:fixed; width:100%; height:100%; top:0; left:0; background: radial-gradient(circle at top,#16a34a44 0%,transparent 55%); z-index:-1; }
+        .glass{ background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); backdrop-filter:blur(15px); border-radius:32px; box-shadow:0 15px 40px rgba(0,0,0,0.5); }
+        .btn{ background:linear-gradient(90deg,#22c55e,#15803d); transition:0.4s; box-shadow:0 0 25px rgba(34,197,94,0.4); }
+        .btn:hover{ transform:translateY(-4px) scale(1.03); box-shadow:0 0 45px rgba(34,197,94,0.7); }
+        .float{ animation:float 4s ease-in-out infinite; }
+        @keyframes float{ 0%,100%{ transform:translateY(0px); } 50%{ transform:translateY(-15px); } }
+    </style>
 </head>
-
 <body>
-
-<div class="container">
-
-    <div class="logo-wrap">
-        <div class="logo">
-            <img src="https://i.ibb.co/XZ4ffCKM/IMG-3813.jpg" alt="Alpha Gaming">
-        </div>
-    </div>
-
-    <h1 class="title">
-        ALPHA <span>GAMING</span><br>
-        BGMI HACK EXPERT 🔥
-    </h1>
-
-    <div class="sub">
-        🔥 100% SAFE & ANTI BAN 🔥
-    </div>
-
-    <div class="timer">
-
-        <div class="time-box">
-            <div class="num">00</div>
-            <div class="label">DAYS</div>
+    <div class="bg-glow"></div>
+    <section class="min-h-screen flex flex-col justify-center items-center px-5 py-10">
+        
+        <div class="float mb-8">
+            <div class="w-32 h-32 rounded-full border-4 border-yellow-500 border-dotted flex items-center justify-center p-2">
+                <div class="w-full h-full rounded-full bg-zinc-900 flex items-center justify-center border border-white/10 overflow-hidden">
+                    <img src="https://i.ibb.co/XZ4ffCKM/IMG-3813.jpg" alt="Alpha Logo" class="w-full h-full object-cover">
+                </div>
+            </div>
         </div>
 
-        <div class="time-box">
-            <div class="num">00</div>
-            <div class="label">HOURS</div>
+        <div class="bg-green-500/10 border border-green-500/30 px-7 py-2 rounded-full mb-7">
+            <p class="text-green-400 text-[10px] uppercase tracking-[0.45em] font-bold">🔥 BGMI OFFICIAL HACK 🔥</p>
         </div>
 
-        <div class="time-box">
-            <div class="num">00</div>
-            <div class="label">MINUTES</div>
+        <div class="text-center mb-10">
+            <h1 class="text-6xl md:text-8xl font-black italic leading-none tracking-tight">
+                <span class="text-white">ALPHA</span><br>
+                <span class="text-yellow-500">GAMING</span>
+            </h1>
         </div>
 
-        <div class="time-box">
-            <div class="num" id="seconds">07</div>
-            <div class="label">SECONDS</div>
+        <div class="glass max-w-md w-full p-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 via-green-500 to-yellow-500"></div>
+            <h2 class="text-2xl font-bold mb-7 flex items-center">
+                <span class="w-3 h-3 bg-green-500 rounded-full mr-3 animate-pulse"></span>
+                Why Join Alpha?
+            </h2>
+            <ul class="space-y-5 text-sm text-gray-300 mb-8">
+                <li><i class="fas fa-bolt text-yellow-500 mr-3"></i> BGMI IOS MAIN ID SAFE HACK </li>
+                <li><i class="fas fa-fire text-red-500 mr-3"></i> 100% Anti-Ban And Trusted </li>
+                <li><i class="fas fa-crown text-yellow-500 mr-3"></i> Daily Premium hack giveaway </li>
+            </ul>
+            <a href="https://t.me/+fWK8W8GhGfpjYzI1" class="btn block text-center py-5 rounded-2xl text-black font-black text-lg uppercase tracking-wider">JOIN TELEGRAM NOW</a>
         </div>
 
-    </div>
-
-    <a href="https://t.me/+eD-Sloc5Onk1ZDc1" class="join-btn">
-
-        <div class="telegram-icon">✈</div>
-
-        JOIN TELEGRAM
-
-        <div class="telegram-icon">✈</div>
-
-    </a>
-
-    <div class="powered">
-        Alpha Gaming Official © 2026
-    </div>
-
-</div>
-
-<script>
-
-let seconds = 7;
-
-const secElement = document.
+        <footer class="mt-12 text-[10px] uppercase tracking-[0.5em] text-gray-600 font-bold">Alpha Gaming Official © 2026</footer>
+    </section>
+</body>
+</html>
